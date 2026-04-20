@@ -1,8 +1,10 @@
 # DIY Whole Genome Sequencing
 
-**Sequence your own genome at home. ~$4,000 all-in. Your DNA never leaves the house.**
+**Sequence your own genome at home. ~$4,500–6,000 all-in. Your DNA never leaves the house.**
 
-A complete guide to DIY whole genome sequencing using Oxford Nanopore technology — from buccal swab to a Claude-built health dashboard. Optimized version of the [Vibe Genomics](https://vibe-genomics.replit.app/) approach, cutting costs by ~60%.
+A complete guide to DIY whole genome sequencing using Oxford Nanopore technology — from buccal swab to a Claude-built health dashboard. Optimized version of the [Vibe Genomics](https://vibe-genomics.replit.app/) approach, cutting costs by ~40%.
+
+> **Note:** The MinION Mk1B is now a legacy product. Current device is the **MinION Mk1D** at $3,150 (device only) or $5,150 (Pack with 5 flow cells). A used Mk1B can be sourced for ~$500–1,500 and still works with current R10.4.1 flow cells.
 
 ---
 
@@ -10,12 +12,14 @@ A complete guide to DIY whole genome sequencing using Oxford Nanopore technology
 
 | Approach | First Genome | Notes |
 |----------|-------------|-------|
-| **This guide (optimized)** | **~$4,000** | Device only + ligation kit + used equipment |
+| **This guide (Pack route)** | **~$6,100** | MinION Mk1D Pack + used equipment |
+| **This guide (used Mk1B)** | **~$4,500** | Used sequencer (eBay) + consumables |
 | Vibe Genomics author | ~$10,000 | Bundle + Bento Lab Pro + no DNA quantification |
 | Nebula/Dante (mail-in) | ~$200–300 | DNA leaves house, no privacy |
 
 Key changes from the original:
-- Buy **MinION device only** (~$1k) instead of the $5,200 bundle
+- **MinION Mk1D Pack ($5,150)** beats buying components separately (saves ~$2,750 in consumables)
+- Or source a **used MinION Mk1B** on eBay (~$500–1,500) — legacy but works with current flow cells
 - Use **Ligation kit (SQK-LSK114)** — 2–3× better yield than Rapid kit (fewer flow cells needed)
 - Skip **Bento Lab Pro** — cheap used centrifuge + sous vide sticks work fine
 - Add a **Qubit fluorometer** (used, ~$200) — prevents wasting $850 flow cells on bad loads

@@ -7,27 +7,35 @@
 
 ## Equipment (One-Time Purchases)
 
+> **MinION price update:** Mk1B is legacy. Current model is Mk1D at $3,150 device-only, or $5,150 for the Pack (device + 5 flow cells + sequencing kit). See equipment/01-sequencer.md and BUDGET.md.
+
 | Status | Item | Est. Cost | Source | Notes |
 |--------|------|-----------|--------|-------|
-| ⬜ | Oxford Nanopore MinION Mk1B (device only) | ~$1,000 | store.nanoporetech.com | Device only — NOT the bundle |
+| ⬜ | **Option A:** MinION Mk1D Pack | $5,150 | store.nanoporetech.com | Best value — includes device + 5 flow cells + kit; no need to buy sequencing consumables separately |
+| ⬜ | **Option B:** MinION Mk1D device only | $3,150 | store.nanoporetech.com | Buy if starting with just 1–2 flow cells; add consumables separately |
+| ⬜ | **Option C:** Used MinION Mk1B | $500–1,500 | eBay / BioSurplus / Labx | Legacy but works; R10.4.1 flow cells still compatible |
 | ⬜ | Microcentrifuge (used, 10,000+ RPM) | ~$150 | eBay | Eppendorf 5415D or 5424 preferred |
 | ⬜ | Thermocycler / sous vide × 2 | ~$100–200 | Amazon | See equipment/03-thermocycler.md |
 | ⬜ | Micropipette set (P2, P20, P200, P1000) | ~$150 | eBay | Used Gilson Pipetman preferred |
 | ⬜ | Qubit 4 fluorometer (used) | ~$200 | eBay / BioSurplus | Critical for flow cell protection |
 
-**Equipment subtotal: ~$1,600–1,700**
+**Equipment subtotal (Pack route): ~$5,850–5,950**
+**Equipment subtotal (device-only route): ~$3,850–3,950**
 
 ---
 
 ## Sequencing Consumables (Per Run)
 
+> If you buy the MinION Mk1D **Pack**, the 5 flow cells and sequencing kit are included — skip those rows below.
+
 | Status | Item | Est. Cost | Source | Notes |
 |--------|------|-----------|--------|-------|
-| ⬜ | R10.4.1 Flow cells × 2 | ~$1,700 | store.nanoporetech.com | Order fresh, use within weeks |
-| ⬜ | ONT Ligation Sequencing Kit (SQK-LSK114) | ~$500 | store.nanoporetech.com | Do NOT get Rapid (SQK-RAD114) |
+| ⬜ | R10.4.1 Flow cells × 2 (device-only route) | ~$1,700 | store.nanoporetech.com | Order fresh, use within weeks; included in Pack |
+| ⬜ | ONT Ligation Sequencing Kit (SQK-LSK114) | ~$500 | store.nanoporetech.com | Do NOT get Rapid (SQK-RAD114); included in Pack |
 | ⬜ | BSA (50 mg/mL, molecular biology grade) | ~$30 | NEB (B9000S) or Sigma | For flow cell priming |
 
-**Sequencing consumables subtotal: ~$2,230**
+**Sequencing consumables subtotal (device-only route): ~$2,230**
+**Sequencing consumables subtotal (Pack route): ~$30** (just BSA)
 
 ---
 
@@ -60,14 +68,11 @@
 
 ## Totals
 
-| Category | Cost |
-|----------|------|
-| Equipment (one-time) | ~$1,650 |
-| Sequencing consumables | ~$2,230 |
-| Extraction consumables | ~$154 |
-| General consumables | ~$159 |
-| **Grand total (first genome)** | **~$4,193** |
-| **Subsequent genomes (consumables only)** | **~$2,543** |
+| Route | First genome | Subsequent genomes |
+|-------|-------------|-------------------|
+| Pack route (Mk1D Pack + used equipment) | **~$6,150** | ~$2,250 |
+| Device-only route (Mk1D + 2 flow cells) | **~$6,350** | ~$2,250 |
+| Used Mk1B route (eBay unit $500–1,500) | **~$4,450–4,950** | ~$2,250 |
 
 ---
 
@@ -75,7 +80,7 @@
 
 | Item | Why Not |
 |------|---------|
-| ONT MinION Starter Bundle (~$5,200) | Overpriced; forces Rapid kit; buy components separately |
+| ONT MinION Mk1D Starter Bundle (~$5,200 old) | Replaced by Pack; Pack includes better flow cells (R10.4.1) |
 | Bento Lab Pro (~$1,800) | We don't need the gel unit; cheaper alternatives exist |
 | NanoDrop spectrophotometer | Overpriced used; Qubit is better for dsDNA quantification |
 | Rapid Sequencing Kit (SQK-RAD114) | Lower yield than Ligation; more flow cells needed |
