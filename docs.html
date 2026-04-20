@@ -140,6 +140,16 @@
     // ── Marked config ───────────────────────────────────────────────────────
     marked.setOptions({ gfm: true, breaks: false });
 
+    // Escape standalone ~ (used as "approximately") so marked.js v9 doesn't
+    // treat them as single-tilde strikethrough delimiters.
+    marked.use({
+      hooks: {
+        preprocess(markdown) {
+          return markdown.replace(/(?<!~)~(?!~)/g, '\\~');
+        }
+      }
+    });
+
     // Custom renderer for checkboxes
     const renderer = new marked.Renderer();
     renderer.listitem = (text, task, checked) => {
