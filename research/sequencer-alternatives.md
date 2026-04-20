@@ -148,12 +148,17 @@ Low-coverage WGS (1–10×) + computational imputation against a reference panel
 - Pharmacogenomics at 20× is well within established clinical thresholds
 - Ultra-low coverage (0.5×) + imputation still detects most actionable GWAS variants
 
-### Practical Recommendation
-**Target 15× as your first-genome goal** (not 30×). This is achievable with:
-- 2 fresh flow cells (if output is average or better), or
-- 1 flow cell + 2 wash-and-reuse runs
+### Coverage Target: 30×
 
-This cuts flow cell costs by ~50% vs. the 30× target.
+30× requires ~96 Gb total (3.2 Gb × 30). Flow cell options:
+
+| Approach | Flow cells | Wash kits | Cost | Expected output |
+|----------|-----------|-----------|------|----------------|
+| Fresh only | 4 cells | 0 | ~$3,400 | ~100 Gb → ~31× |
+| **Wash strategy** | **2 cells** | **2 kits** | **~$2,200** | **~100–120 Gb → ~31–37×** |
+| MinION Mk1D Pack | 5 included | 0 | included in $5,150 | ~125 Gb → ~39× avg |
+
+**Recommended approach:** Buy the Pack (5 flow cells included) and use the wash kit to extend life. At average output you'll clear 30× with cells to spare.
 
 ---
 

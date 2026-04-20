@@ -46,7 +46,7 @@ Lower upfront if you only want 2 flow cells to start.
 | **Total (first genome)** | **~$6,354** | Only 2 flow cells — may need more for 30× |
 | **Total (subsequent genomes)** | **~$2,254** | |
 
-**Warning:** 2 flow cells gives ~30–70 Gb at best. Human WGS at 30× requires ~99 Gb. You may need to buy 1–2 additional flow cells ($850 each) mid-project. The Pack route is safer.
+**Warning for 30× target:** 2 flow cells gives ~30–70 Gb. You need ~96 Gb for 30×. Either add 2 more flow cells ($1,700) or use the Flow Cell Wash Kit to get 3 runs per cell. The Pack route avoids this problem entirely.
 
 ---
 
@@ -94,8 +94,8 @@ _Update this as items are ordered/received._
 - Better library prep yield = fewer flow cells needed = second biggest lever
 - Ligation kit (SQK-LSK114) vs Rapid kit is the single most important yield decision
 - Qubit prevents the most common cause of wasted flow cells (bad DNA quantification)
-- **15× coverage is the realistic first-genome target** — not 30×. Science supports 10–15× for personal genomics, pharmacogenomics, and polygenic risk scoring. 30× is for clinical/diagnostic use.
-- 1–2 flow cells at average output (25 Gb each) gives ~8–16× coverage — achievable goal
+- **Coverage target: 30×** — requires ~96 Gb total (3.2 Gb human genome × 30). At average MinION output (~25 Gb/flow cell): need 4 fresh flow cells, or 2 flow cells + 2 wash cycles (recommended).
+- Pack route (5 flow cells) covers 30× comfortably — 5 × 25 Gb avg = 125 Gb = ~39× at average output
 - Subsequent genome costs drop significantly once equipment is purchased
 - Flow cells degrade over time — don't stockpile far ahead of use
 - The Pack ($5,150) includes sequencing kit — no need to buy SQK-LSK114 separately
