@@ -27,15 +27,18 @@
 ## Sequencing Consumables (Per Run)
 
 > If you buy the MinION Mk1D **Pack**, the 5 flow cells and sequencing kit are included — skip those rows below.
+>
+> **Key cost lever:** Flow Cell Wash Kit (EXP-WSH004) enables 3 reuses per $850 flow cell. Buy this — it's officially supported by ONT.
 
 | Status | Item | Est. Cost | Source | Notes |
 |--------|------|-----------|--------|-------|
 | ⬜ | R10.4.1 Flow cells × 2 (device-only route) | ~$1,700 | store.nanoporetech.com | Order fresh, use within weeks; included in Pack |
 | ⬜ | ONT Ligation Sequencing Kit (SQK-LSK114) | ~$500 | store.nanoporetech.com | Do NOT get Rapid (SQK-RAD114); included in Pack |
+| ⬜ | **Flow Cell Wash Kit (EXP-WSH004)** | **~$250** | store.nanoporetech.com / LabMart | Enables 3–4 runs per flow cell; saves $1,000–1,700 in flow cells |
 | ⬜ | BSA (50 mg/mL, molecular biology grade) | ~$30 | NEB (B9000S) or Sigma | For flow cell priming |
 
-**Sequencing consumables subtotal (device-only route): ~$2,230**
-**Sequencing consumables subtotal (Pack route): ~$30** (just BSA)
+**Sequencing consumables subtotal (device-only route): ~$2,480**
+**Sequencing consumables subtotal (Pack route): ~$280** (wash kit + BSA; flow cells and kit included in Pack)
 
 ---
 

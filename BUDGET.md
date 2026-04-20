@@ -90,9 +90,26 @@ _Update this as items are ordered/received._
 
 ## Notes
 - Flow cells are the biggest per-genome variable cost ($850 each)
-- Better library prep yield = fewer flow cells needed = biggest lever on ongoing cost
+- **Flow Cell Wash Kit (EXP-WSH004, ~$250):** enables 3–4 runs per flow cell — the single best cost lever on consumables. Officially supported by ONT. Cuts effective flow cell cost from $850/run to ~$280/run.
+- Better library prep yield = fewer flow cells needed = second biggest lever
 - Ligation kit (SQK-LSK114) vs Rapid kit is the single most important yield decision
 - Qubit prevents the most common cause of wasted flow cells (bad DNA quantification)
+- **15× coverage is the realistic first-genome target** — not 30×. Science supports 10–15× for personal genomics, pharmacogenomics, and polygenic risk scoring. 30× is for clinical/diagnostic use.
+- 1–2 flow cells at average output (25 Gb each) gives ~8–16× coverage — achievable goal
 - Subsequent genome costs drop significantly once equipment is purchased
 - Flow cells degrade over time — don't stockpile far ahead of use
 - The Pack ($5,150) includes sequencing kit — no need to buy SQK-LSK114 separately
+
+## DIY Sequencer?
+**Not possible.** The MinION contains:
+1. Proprietary nanopore protein (engineered CsgG) — not purchasable, patented
+2. Custom ASIC chip — reads picoamp current changes; impossible to source or fab outside a semiconductor fab
+3. Proprietary enzyme motor — controls DNA threading speed
+
+Solid-state nanopores (academic DIY approach) require electron beam lithography equipment ($500k+) and are not WGS-ready. This is a ~5–10 year horizon for hobbyists.
+
+**Alternatives researched and eliminated:**
+- SmidgION (ONT smartphone sequencer): Still vaporware; no commercial release date
+- AxBio: Startup, no product available
+- MGI DNBSEQ-E25: No consumer pricing; institutional
+- Everything else: $20,000+
