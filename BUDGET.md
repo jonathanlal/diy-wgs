@@ -8,7 +8,29 @@
 
 ## Scenarios
 
-### Scenario A — Pack Route (~$6,100 first genome) ✅ Recommended
+### Scenario A — UiO NorSeq Path (~$1,600–3,200 first genome) 🔍 Currently Investigating
+Extract DNA at home, ship to UiO's PromethION service, get long-read FASTQ back.
+See `protocols/uio-norseq.md` for full protocol.
+
+| Item | Cost | Notes |
+|------|------|-------|
+| Used microcentrifuge | ~$150 | Eppendorf 5415D, eBay |
+| Used micropipette set | ~$150 | Gilson Pipetman, eBay |
+| Qubit 4 (used) + assay kit | ~$300 | Quantification before shipping |
+| **NEB Monarch HMW DNA Kit (T3050)** | ~$150 | HMW extraction; >30 kb required by NorSeq |
+| Misc consumables | ~$100 | Tubes, tips, etc. |
+| **NorSeq PromethION sequencing** | **€800–2,000** | Quote required; library prep included |
+| Shipping to OUS Ullevål | ~€60 | DHL Express with cold pack |
+| **Total (first genome)** | **~$1,600–3,200** | Pending quote; 2–4× cheaper than full DIY |
+| **Subsequent genomes** | **~€900–2,100** | Just service fee + shipping |
+
+**Action required before committing:** Email post@sequencing.uio.no to confirm access for private individuals and get a quote. See `protocols/uio-norseq.md` Phase 0.
+
+**Advantage vs. full DIY:** ~$3,000–4,500 cheaper on first genome. PromethION gives better reads than MinION (up to 150 Gb/flow cell vs 15–35 Gb). GDPR-protected; data deleted after 2 months.
+
+---
+
+### Scenario B — Pack Route (~$6,100 first genome)
 Buy the MinION Mk1D Pack — dramatically better value than device + separate consumables.
 
 | Item | Cost | Notes |
