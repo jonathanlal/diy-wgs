@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY Genome Sequencing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <span class="logo-helix">⬡</span>
+      <span>DIY&nbsp;WGS</span>
+    </a>
+    <div class="nav-links">
+      <a href="#process">Process</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#budget">Budget</a>
+      <a href="#docs">Docs</a>
+      <a href="https://github.com/jonathanmlaliberte/diy-wgs" class="nav-github" target="_blank">GitHub →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="dna-ticker" id="dnaTicker"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Oxford Nanopore · Home Lab · Open Source</div>
+      <h1>Sequence Your Own<br><span class="gradient-text">Genome at Home</span></h1>
+      <p class="hero-sub">
+        A complete DIY guide to whole genome sequencing — from buccal swab to
+        health dashboard. Your DNA, your machine, your house. ~$4,000 all-in.
+      </p>
+      <div class="hero-cta">
+        <a href="#process" class="btn-primary">View the Guide</a>
+        <a href="https://github.com/jonathanmlaliberte/diy-wgs" class="btn-secondary" target="_blank">GitHub →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">~$4k</span>
+          <span class="stat-label">first genome</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">15×</span>
+          <span class="stat-label">coverage achievable</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">72 hr</span>
+          <span class="stat-label">hands-off sequencing</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">stays at home</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title">Why sequence yourself?</h2>
+      <p class="section-sub">23andMe checks ~600,000 positions. Your genome has 3.3 billion.</p>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <h3>Privacy First</h3>
+          <p>Your DNA never leaves your house. No lab, no third-party storage, no terms of service governing your most personal data.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🧬</div>
+          <h3>Full Genome</h3>
+          <p>Whole genome sequencing captures billions of base pairs. Run any test, any time — no re-sequencing needed as science advances.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤖</div>
+          <h3>AI-Powered Analysis</h3>
+          <p>Hand your VCF to Claude. Ask it anything — epilepsy risk, drug metabolism, structural variants. Build a custom dashboard in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <h2 class="section-title">The Process</h2>
+      <p class="section-sub">Five phases. The wet lab takes one focused day; the sequencer runs itself.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <div class="step-header">
+              <h3>DNA Collection</h3>
+              <span class="step-time">~15 min</span>
+            </div>
+            <p>Swish saline mouthwash for 60 seconds, centrifuge the result into a small white cell pellet. No needles, no clinic.</p>
+            <div class="step-items">
+              <span class="tag">Saline mouthwash</span>
+              <span class="tag">Centrifuge</span>
+              <span class="tag">1.5mL tube</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <div class="step-header">
+              <h3>DNA Extraction</h3>
+              <span class="step-time">~1.5 hr</span>
+            </div>
+            <p>Lyse cells with Proteinase K, bind DNA to a silica column, wash away everything else, elute pure genomic DNA. Kit or DIY CTAB method.</p>
+            <div class="step-items">
+              <span class="tag">Zymo kit</span>
+              <span class="tag">Thermocycler</span>
+              <span class="tag">Qubit</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <div class="step-header">
+              <h3>Library Prep</h3>
+              <span class="step-time">~1 hr</span>
+            </div>
+            <p>Fragment DNA, repair ends, ligate adapters and motor proteins that pull strands through nanopores. Load onto the flow cell dropwise.</p>
+            <div class="step-items">
+              <span class="tag">ONT SQK-LSK114</span>
+              <span class="tag">SPRI beads</span>
+              <span class="tag">Flow cell</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <div class="step-header">
+              <h3>Sequencing</h3>
+              <span class="step-time">72 hr (hands-off)</span>
+            </div>
+            <p>MinKNOW handles everything. DNA threads through nanopores, current resistance identifies each base. Walk away. Come back in three days.</p>
+            <div class="step-items">
+              <span class="tag">MinION</span>
+              <span class="tag">MinKNOW</span>
+              <span class="tag">HAC basecalling</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <div class="step-header">
+              <h3>Analysis & Dashboard</h3>
+              <span class="step-time">2–4 hr compute</span>
+            </div>
+            <p>Align reads to GRCh38, call variants with LongShot, filter to high-confidence SNPs. Then hand everything to Claude for a custom dashboard.</p>
+            <div class="step-items">
+              <span class="tag">minimap2</span>
+              <span class="tag">LongShot</span>
+              <span class="tag">Claude</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT -->
+  <section id="equipment">
+    <div class="container">
+      <h2 class="section-title">Equipment</h2>
+      <p class="section-sub">What to buy, what to build, and what to skip entirely.</p>
+      <div class="equip-table-wrap">
+        <table class="equip-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Our Choice</th>
+              <th>Cost</th>
+              <th>Author Paid</th>
+              <th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="equip-name">DNA Sequencer</div>
+                <div class="equip-desc">Oxford Nanopore MinION — no alternatives at this price</div>
+              </td>
+              <td><span class="mono">MinION Mk1B device only</span></td>
+              <td class="cost">~$1,000</td>
+              <td class="cost muted">~$5,200 (bundle)</td>
+              <td><span class="verdict buy">Buy</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Flow Cells</div>
+                <div class="equip-desc">R10.4.1 — store at 2–8°C, never freeze</div>
+              </td>
+              <td><span class="mono">R10.4.1 × 2–3</span></td>
+              <td class="cost">$850 each</td>
+              <td class="cost muted">Included in bundle</td>
+              <td><span class="verdict buy">Buy fresh</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Library Prep Kit</div>
+                <div class="equip-desc">Ligation kit gives 2–3× better yield than Rapid</div>
+              </td>
+              <td><span class="mono">SQK-LSK114</span></td>
+              <td class="cost">~$500</td>
+              <td class="cost muted">Rapid kit (bundle)</td>
+              <td><span class="verdict buy">Buy — not Rapid</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Centrifuge</div>
+                <div class="equip-desc">Must reach 8,000 × g for Zymo kit wash steps</div>
+              </td>
+              <td><span class="mono">Used Eppendorf 5415D</span></td>
+              <td class="cost">~$150</td>
+              <td class="cost muted">~$1,800 (Bento Pro)</td>
+              <td><span class="verdict buy">Buy used</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Thermocycler</div>
+                <div class="equip-desc">Only need temperature holds, not fast cycling</div>
+              </td>
+              <td><span class="mono">2× sous vide sticks</span></td>
+              <td class="cost">~$100–200</td>
+              <td class="cost muted">~$1,800 (Bento Pro)</td>
+              <td><span class="verdict build">Build / sous vide</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Micropipettes</div>
+                <div class="equip-desc">P2, P20, P200, P1000 — accuracy matters for library prep</div>
+              </td>
+              <td><span class="mono">Used Gilson Pipetman set</span></td>
+              <td class="cost">~$150</td>
+              <td class="cost muted">~$400</td>
+              <td><span class="verdict buy">Buy used</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">DNA Quantification</div>
+                <div class="equip-desc">Quantify before loading to protect $850 flow cells</div>
+              </td>
+              <td><span class="mono">Used Qubit 4</span></td>
+              <td class="cost">~$200</td>
+              <td class="cost muted">Skipped (bad idea)</td>
+              <td><span class="verdict important">Don't skip this</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">DNA Extraction</div>
+                <div class="equip-desc">Kit first run; DIY CTAB protocol later saves ~$40/run</div>
+              </td>
+              <td><span class="mono">Zymo D4068T</span></td>
+              <td class="cost">~$54</td>
+              <td class="cost muted">~$54</td>
+              <td><span class="verdict eval">Evaluate CTAB later</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="equip-name">Analysis Compute</div>
+                <div class="equip-desc">All tools run on Apple Silicon. Cloud GPU optional for DeepVariant.</div>
+              </td>
+              <td><span class="mono">MacBook M-series + LongShot</span></td>
+              <td class="cost">$0 extra</td>
+              <td class="cost muted">DGX Spark</td>
+              <td><span class="verdict build">Free / open-source</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget">
+    <div class="container">
+      <h2 class="section-title">Budget</h2>
+      <p class="section-sub">The author spent ~$10k without optimizing. Here's how to do better.</p>
+      <div class="budget-cards">
+        <div class="budget-card">
+          <div class="budget-tier">Minimum Viable</div>
+          <div class="budget-price">~$4,000</div>
+          <div class="budget-per">first genome</div>
+          <div class="budget-items">
+            <div class="bi">MinION device only — <strong>$1,000</strong></div>
+            <div class="bi">2× flow cells — <strong>$1,700</strong></div>
+            <div class="bi">Ligation kit — <strong>$500</strong></div>
+            <div class="bi">Used centrifuge — <strong>$150</strong></div>
+            <div class="bi">Sous vide × 2 — <strong>$150</strong></div>
+            <div class="bi">Used pipette set — <strong>$150</strong></div>
+            <div class="bi">Zymo kit + misc — <strong>$250</strong></div>
+          </div>
+          <div class="budget-subsequent">Subsequent genomes: ~$2,000</div>
+        </div>
+        <div class="budget-card recommended">
+          <div class="budget-rec-badge">Recommended</div>
+          <div class="budget-tier">Optimized</div>
+          <div class="budget-price">~$5,000</div>
+          <div class="budget-per">first genome</div>
+          <div class="budget-items">
+            <div class="bi">Everything above — <strong>~$4,000</strong></div>
+            <div class="bi">Used Qubit 4 — <strong>+$200</strong></div>
+            <div class="bi">Qubit assay kits — <strong>+$200</strong></div>
+            <div class="bi">1 extra flow cell buffer — <strong>+$850</strong></div>
+            <div class="bi bi-note">Qubit prevents wasted $850 flow cells</div>
+          </div>
+          <div class="budget-subsequent">Subsequent genomes: ~$2,200</div>
+        </div>
+        <div class="budget-card dim">
+          <div class="budget-tier">Author's Route</div>
+          <div class="budget-price">~$10,000</div>
+          <div class="budget-per">first genome</div>
+          <div class="budget-items">
+            <div class="bi">MinION bundle — <strong>$5,200</strong></div>
+            <div class="bi">Bento Lab Pro — <strong>$1,800</strong></div>
+            <div class="bi">No DNA quantification — <strong>wasted flow cells</strong></div>
+            <div class="bi">Rapid kit (low yield) — <strong>needed more runs</strong></div>
+            <div class="bi bi-note">Great writeup, poor cost optimization</div>
+          </div>
+          <div class="budget-subsequent">Don't do this</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCS -->
+  <section id="docs">
+    <div class="container">
+      <h2 class="section-title">Documentation</h2>
+      <p class="section-sub">Every step has a full checklist. Every piece of equipment has a buy-vs-build analysis.</p>
+      <div class="docs-grid">
+        <a href="protocols/01-dna-collection.md" class="doc-card">
+          <div class="doc-icon">🧪</div>
+          <div class="doc-body">
+            <h4>Protocol 1 — DNA Collection</h4>
+            <p>Buccal cell collection checklist</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="protocols/02-dna-extraction.md" class="doc-card">
+          <div class="doc-icon">🔬</div>
+          <div class="doc-body">
+            <h4>Protocol 2 — DNA Extraction</h4>
+            <p>Zymo miniprep step-by-step</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="protocols/03-library-prep.md" class="doc-card">
+          <div class="doc-icon">📦</div>
+          <div class="doc-body">
+            <h4>Protocol 3 — Library Prep</h4>
+            <p>Ligation kit, SPRI cleanup, flow cell loading</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="protocols/04-sequencing.md" class="doc-card">
+          <div class="doc-icon">⚡</div>
+          <div class="doc-body">
+            <h4>Protocol 4 — Sequencing</h4>
+            <p>MinKNOW setup and run monitoring</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="protocols/05-bioinformatics.md" class="doc-card">
+          <div class="doc-icon">💻</div>
+          <div class="doc-body">
+            <h4>Protocol 5 — Bioinformatics</h4>
+            <p>minimap2 → LongShot → VCF pipeline</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="equipment/06-shopping-list.md" class="doc-card">
+          <div class="doc-icon">🛒</div>
+          <div class="doc-body">
+            <h4>Shopping List</h4>
+            <p>Everything to buy with prices and status</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="research/build-vs-buy.md" class="doc-card">
+          <div class="doc-icon">⚙️</div>
+          <div class="doc-body">
+            <h4>Build vs Buy Analysis</h4>
+            <p>What to build, what to skip, what's dangerous to DIY</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a href="bioinformatics/dashboard.md" class="doc-card">
+          <div class="doc-icon">📊</div>
+          <div class="doc-body">
+            <h4>Dashboard Guide</h4>
+            <p>Build a 23andMe-style viewer with Claude</p>
+          </div>
+          <span class="doc-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="logo-helix">⬡</span>
+          <span class="footer-name">DIY WGS</span>
+          <span class="footer-sep">·</span>
+          <span class="footer-note">Inspired by <a href="https://vibe-genomics.replit.app/" target="_blank">Vibe Genomics</a></span>
+        </div>
+        <div class="footer-right">
+          <span class="footer-note">For research & education only. Not medical advice.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // DNA ticker animation
+    const bases = ['A','T','C','G'];
+    const ticker = document.getElementById('dnaTicker');
+    const seq = Array.from({length: 120}, () => bases[Math.floor(Math.random()*4)]).join('');
+    ticker.textContent = seq + '  ' + seq;
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+      });
+    });
+
+    // Nav shadow on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
