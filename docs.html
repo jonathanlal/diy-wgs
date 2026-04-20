@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY WGS — Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="docs.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+</head>
+<body class="docs-page">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-helix">⬡</span>
+      <span>DIY&nbsp;WGS</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#process">Process</a>
+      <a href="index.html#equipment">Equipment</a>
+      <a href="index.html#budget">Budget</a>
+      <a href="index.html#docs" class="active">Docs</a>
+      <a href="https://github.com/jonathanlal/diy-wgs" class="nav-github" target="_blank">GitHub →</a>
+    </div>
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+  </nav>
+
+  <div class="docs-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="docs-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Overview</div>
+          <a href="docs.html?file=PROGRESS.md" class="sidebar-link" data-file="PROGRESS.md">
+            <span class="sl-icon">📋</span> Progress Tracker
+          </a>
+          <a href="docs.html?file=BUDGET.md" class="sidebar-link" data-file="BUDGET.md">
+            <span class="sl-icon">💰</span> Budget
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Protocols</div>
+          <a href="docs.html?file=protocols/01-dna-collection.md" class="sidebar-link" data-file="protocols/01-dna-collection.md">
+            <span class="sl-icon">01</span> DNA Collection
+          </a>
+          <a href="docs.html?file=protocols/02-dna-extraction.md" class="sidebar-link" data-file="protocols/02-dna-extraction.md">
+            <span class="sl-icon">02</span> DNA Extraction
+          </a>
+          <a href="docs.html?file=protocols/03-library-prep.md" class="sidebar-link" data-file="protocols/03-library-prep.md">
+            <span class="sl-icon">03</span> Library Prep
+          </a>
+          <a href="docs.html?file=protocols/04-sequencing.md" class="sidebar-link" data-file="protocols/04-sequencing.md">
+            <span class="sl-icon">04</span> Sequencing
+          </a>
+          <a href="docs.html?file=protocols/05-bioinformatics.md" class="sidebar-link" data-file="protocols/05-bioinformatics.md">
+            <span class="sl-icon">05</span> Bioinformatics
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Equipment</div>
+          <a href="docs.html?file=equipment/01-sequencer.md" class="sidebar-link" data-file="equipment/01-sequencer.md">
+            <span class="sl-icon">🔬</span> Sequencer
+          </a>
+          <a href="docs.html?file=equipment/02-centrifuge.md" class="sidebar-link" data-file="equipment/02-centrifuge.md">
+            <span class="sl-icon">⚙️</span> Centrifuge
+          </a>
+          <a href="docs.html?file=equipment/03-thermocycler.md" class="sidebar-link" data-file="equipment/03-thermocycler.md">
+            <span class="sl-icon">🌡️</span> Thermocycler
+          </a>
+          <a href="docs.html?file=equipment/04-pipettes.md" class="sidebar-link" data-file="equipment/04-pipettes.md">
+            <span class="sl-icon">💉</span> Pipettes
+          </a>
+          <a href="docs.html?file=equipment/05-quantification.md" class="sidebar-link" data-file="equipment/05-quantification.md">
+            <span class="sl-icon">📊</span> DNA Quantification
+          </a>
+          <a href="docs.html?file=equipment/06-shopping-list.md" class="sidebar-link" data-file="equipment/06-shopping-list.md">
+            <span class="sl-icon">🛒</span> Shopping List
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Bioinformatics</div>
+          <a href="docs.html?file=bioinformatics/pipeline.md" class="sidebar-link" data-file="bioinformatics/pipeline.md">
+            <span class="sl-icon">⚡</span> Pipeline
+          </a>
+          <a href="docs.html?file=bioinformatics/tools.md" class="sidebar-link" data-file="bioinformatics/tools.md">
+            <span class="sl-icon">🛠️</span> Tools
+          </a>
+          <a href="docs.html?file=bioinformatics/dashboard.md" class="sidebar-link" data-file="bioinformatics/dashboard.md">
+            <span class="sl-icon">🖥️</span> Dashboard
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Research</div>
+          <a href="docs.html?file=research/build-vs-buy.md" class="sidebar-link" data-file="research/build-vs-buy.md">
+            <span class="sl-icon">⚖️</span> Build vs Buy
+          </a>
+          <a href="docs.html?file=research/diy-extraction.md" class="sidebar-link" data-file="research/diy-extraction.md">
+            <span class="sl-icon">🧪</span> DIY Extraction
+          </a>
+          <a href="docs.html?file=reagents/master-list.md" class="sidebar-link" data-file="reagents/master-list.md">
+            <span class="sl-icon">📦</span> Reagents List
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="docs-main">
+      <div class="docs-content-wrap">
+        <div id="breadcrumb" class="breadcrumb"></div>
+        <article id="markdown-content" class="markdown-body">
+          <div class="docs-placeholder">
+            <div class="placeholder-icon">📂</div>
+            <h2>Select a document</h2>
+            <p>Choose a file from the sidebar to get started.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    // ── Sidebar toggle (mobile) ─────────────────────────────────────────────
+    const sidebar = document.getElementById('sidebar');
+    document.getElementById('sidebarToggle').addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    // ── Marked config ───────────────────────────────────────────────────────
+    marked.setOptions({ gfm: true, breaks: false });
+
+    // Custom renderer for checkboxes
+    const renderer = new marked.Renderer();
+    renderer.listitem = (text, task, checked) => {
+      if (task) {
+        return `<li class="task-item ${checked ? 'checked' : ''}">
+          <span class="checkbox ${checked ? 'cb-done' : 'cb-todo'}">${checked ? '✓' : ''}</span>
+          <span>${text.replace(/^<p>|<\/p>$/g, '')}</span>
+        </li>`;
+      }
+      return `<li>${text}</li>`;
+    };
+    marked.use({ renderer });
+
+    // ── Load file ───────────────────────────────────────────────────────────
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+
+    // Highlight active sidebar link
+    if (file) {
+      document.querySelectorAll('.sidebar-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.file === file);
+      });
+
+      // Breadcrumb
+      const parts = file.replace('.md', '').split('/');
+      const crumbEl = document.getElementById('breadcrumb');
+      crumbEl.innerHTML = ['Docs', ...parts.map(p =>
+        p.replace(/-/g, ' ').replace(/^\d+/, '').trim()
+          .replace(/\b\w/g, c => c.toUpperCase())
+      )].join(' <span class="crumb-sep">›</span> ');
+
+      // Fetch and render
+      fetch(file)
+        .then(r => {
+          if (!r.ok) throw new Error(`${r.status}`);
+          return r.text();
+        })
+        .then(text => {
+          const content = document.getElementById('markdown-content');
+          content.innerHTML = marked.parse(text);
+          // Update title
+          const h1 = content.querySelector('h1');
+          if (h1) document.title = `DIY WGS — ${h1.textContent}`;
+          // Scroll to top
+          window.scrollTo(0, 0);
+        })
+        .catch(err => {
+          document.getElementById('markdown-content').innerHTML =
+            `<div class="docs-error"><h2>Could not load file</h2><p>${file} — ${err.message}</p></div>`;
+        });
+    }
+  </script>
+
+</body>
+</html>
